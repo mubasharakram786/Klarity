@@ -817,8 +817,33 @@ Amir Section Style
 }
 
 .faq-title {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
+  max-width: 514px;
+  position: relative;
+
 }
+.faq-title::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 55%;
+    background-image: url(/assets/images/y-balls.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 28px;
+    top: 54px;
+}
+.faq-title::after{
+   bottom: -13px;
+    left: -32px;
+    position: absolute;
+    content: '';
+    width: 35%;
+    height: 14%;
+    background-image: url(/assets/images/snake.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
 .faq-title h2 {
   font-size: 32px;
   line-height: 43px;
@@ -1165,6 +1190,7 @@ Amir Section Style
   transform: scaleY(0);
   opacity: 0;
 }
+
 .owl-nav.disabled {
   display: flex !important;
   pointer-events: auto !important;
@@ -1198,7 +1224,7 @@ Amir Section Style
   transition: background 0.3s ease !important;
 }
 
-.kalarity__Journal-slider .owl-prev{
+.kalarity__Journal-slider .owl-prev {
   left: 0;
 }
 
@@ -1962,3 +1988,54 @@ footer {
   100% { transform: translateY(15px); }
 }
 
+@media(max-width:1024px) {
+  .kalarity__Journal-sec {
+    padding: 75px 0 30px 0;
+  }
+
+  .text-content h2 {
+    font-size: 35px;
+    line-height: 40px;
+
+  }
+
+  .text-content h4 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .visit-blog-btn {
+    padding: 15px 13px;
+    width: 200px;
+    font-size: 15px;
+  }
+
+  .kalarity__intro .kalarity__container {
+    padding: 30px 0 50px 0;
+  }
+
+  .kalarity__icon {
+    max-width: 250px;
+    height: 80px;
+  }
+
+  .kalarity__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .kalarity__headline {
+    font-size: 24px;
+    margin: 10px 0 20px auto;
+  }
+
+  .kalarity__description {
+    font-size: 15px;
+    padding-inline: 20px;
+    margin: 0 auto 40px auto;
+  }
+  .kalarity__button{
+        padding: 18px 27px;
+            font-size: 14px;
+  }
+}
