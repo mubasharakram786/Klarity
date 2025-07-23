@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Rubik !important;
+  
+}
+body{
+  font-family: "Rubik", sans-serif;
 }
 .mb-40{
   margin-bottom: 40px;
@@ -22,7 +25,7 @@
   justify-content: flex-start;
   color: #ffffff;
 }
-.container {
+.container-custom {
   width: 1280px;
   margin: 0 auto;
 }
@@ -85,18 +88,6 @@
     color: #ffffff;
     line-height: 19px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ///////////////////////
 ----THE LIQUID SECTION---
@@ -203,17 +194,10 @@
   display: block;
 }
 
-
-
-
-
-
 /* ///////////////////////
 ----THE PRODUCT SECTION---
 ////////////////////// */
-
-
-.product-wrapper {
+.product-wrapper-custom {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -249,7 +233,7 @@
     flex-direction: column;
     gap: 12px;
 }
-.product-info {
+.product-info-custom {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -333,37 +317,6 @@
 }
 
 /* CUSTOM UTILITY CLASS*/
-.d-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Main Wrapper */
-.product-highlight {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 4rem 10px;
-}
-
-/* Top Section: Image + Text */
-.product-wrapper {
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.product-visual {
-  width: 100%;
-  max-width: 698px;
-  height: auto;
-  min-height: 418px;
-}
-
-img {
-  max-width: 100%;
-  height: 100%;
-  display: block;
-}
 
 .product-info {
   flex: 1;
@@ -1153,6 +1106,19 @@ Amir Section Style
   font-family: "Rubik", sans-serif;
   font-weight: bold;
   cursor: pointer;
+  position: relative;
+  &::before{
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    transform: translateX(-50%);
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #FFFDE9
+  }
 }
 
 .Journal-slider-card .slider__image {
@@ -1269,6 +1235,58 @@ Amir Section Style
 /*=============================
     Top Picks
 ===============================*/
+.top-picks{
+  margin-bottom: 40px;
+  .top-picks-heading{ 
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 46px;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    &::before{
+      content: url("./assets/images/shape-arrow.svg");
+      position: absolute;
+      top: -20px;
+      left: -18px
+    }
+    &::after{
+      content: url("./assets/images/half-fill-circle.svg");
+      position: absolute;
+      right: -27px;
+      bottom: 8px;
+    }
+  }
+  .light-heading{
+  font-weight: 300;
+  font-size: 32px;
+  color: #414141;
+    line-height: 38px;
+  }
+  .top-pics-content{
+    font-size: 16px;
+    color: #878787;
+    line-height: 19px;
+    max-width: 615px; 
+    position: relative;
+    &::before{
+      content: url("./assets/images/snake.png");
+      position: absolute;
+      top: -15px;
+      left: 0;
+    }
+  }
+}
+.top-picks-header{
+  position: relative;
+  padding-left: 20px;
+  &::before{
+    content: url("./assets/images/circle-plus.svg");
+    position: absolute;
+    bottom: 0;
+    left: -16px;
+  }
+}
 .top-picks-product-list {
   display: flex;
   flex-wrap: wrap;
@@ -1278,6 +1296,7 @@ Amir Section Style
 .top-picks-card {
   border: 1px solid #f8f8f8;
   height: 556px;
+  flex: 0 0 calc(25% - 11px);
   .qty-dropdown{
     height: 48px;
     background-color: #F8F8F8;
@@ -1294,6 +1313,7 @@ Amir Section Style
       display: flex;
       align-items: center;
       gap: 5px;
+      cursor: pointer;
     }
     span{
       font-size: 14px;
@@ -1323,10 +1343,14 @@ Amir Section Style
 }
 
 .top-picks-product-title {
-font-size: 22px;
-color: #000;
-line-height:27px;
+  font-size: 22px;
+  color: #000;
+  line-height:27px;
   margin-bottom:23px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
 }
 
 .top-picks-product-price {
@@ -1370,6 +1394,191 @@ margin-bottom:16px;
 .total-reviews-count {
   font-size: 10px;
   color: #AEAEAE;
+}
+/*================================
+ Power up yourself
+================================*/
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mb-40{
+  margin-bottom: 40px;
+}
+/* Main Wrapper */
+.product-highlight {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4rem 10px 0;
+}
+/* Top Section: Image + Text */
+.product-wrapper {
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+.product-visual {
+    width: 100%;
+    max-width: 660px;
+    height: auto;
+    min-height: 418px;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 300px;
+  margin-bottom: 40px;
+}
+.product-info div {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  p {
+    font-size: 58px;
+    color: #628742;
+      transform: translateY(-10px);
+      font-weight: 600;
+      .big-M{
+    font-size: 95px;
+    font-weight: 300;
+  }
+  }
+}
+.product-info .accent {
+  color: #B23C3B;
+  /* font-weight: 300; */
+  display: inline-block;
+  font-size: 18px;
+  transform: translate(75px);
+}
+.product-info p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+  margin-bottom: 42px;
+}
+.btn-shop{
+  background-color: #FFE600;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1.5rem;
+  max-width: 248px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  color: #5A3F16;
+}
+.strain-grid{
+    gap: calc(4rem - 20px);
+}
+/* DONT CHANGE THIS ORDER */
+.maeng-da {
+  background: transparent url('./assets/images/l1.png') 0% 0% no-repeat padding-box;
+  background-size: contain;
+}
+.strain-item:focus {
+  background-image: url('./assets/images/foccus.png') !important;
+}
+.maeng-da:hover {
+  background-image: url('./assets/images/l-2.png');
+}
+.red-bali {
+  background: transparent url('./assets/images/red.png') 0% 0% no-repeat padding-box;
+}
+.red-bali:hover {
+  background-image: url('./assets/images/red-2.png');
+}
+.gold {
+  background: transparent url('./assets/images/gold.png') 0% 0% no-repeat padding-box;
+}
+.gold:hover {
+  background-image: url('./assets/images/gold-2.png');
+}
+.trainwreck {
+  background: transparent url('./assets/images/coper.png') 0% 0% no-repeat padding-box;
+}
+.trainwreck:hover {
+  background-image: url('./assets/images/coper-2.png');
+}
+.green-malay {
+  background: transparent url('./assets/images/green.png') 0% 0% no-repeat padding-box;
+}
+.green-malay:hover {
+  background-image: url('./assets/images/green-2.png');
+}
+.white-borneo {
+  background: transparent url('./assets/images/sky-2.png') 0% 0% no-repeat padding-box;
+}
+.white-borneo:hover {
+  background-image: url('./assets/images/sky.png');
+}
+.white-thai {
+  background: transparent url('./assets/images/faded.png') 0% 0% no-repeat padding-box;
+}
+.white-thai:hover {
+  background-image: url('./assets/images/faded-2.png');
+}
+.strain-item {
+  width: 131px;
+  height: 164px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image .4s ease;
+}
+/* DONT CHANGE Above ORDER */
+.bgc-clr{
+   background-color: #F9F9F9;
+   align-items: unset;
+}
+.about-kratom{
+  padding: 35px 40px;
+ h1{
+  max-width: 386px;
+  span{
+    font-size: 32px;
+    font-weight: 300;
+    color: #414141;
+  }
+    p{
+      color: #000;
+     font-size: 38px;
+    font-weight: 800;
+    line-height: 51px;
+    text-transform: uppercase;
+    }
+  }
+  .link-custom{
+    color: #0F0F0F;
+    font-size: 16px;
+  }
+}
+.decorated{
+  position: relative;
+}
+.decorated::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 55%;
+    background-image: url(./assets/images/y-balls.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 28px;
+    top: 54px;
+}
+.decorated::after{
+   bottom: -13px;
+    left: -32px;
+    position: absolute;
+    content: '';
+    width: 35%;
+    height: 14%;
+    background-image: url(./assets/images/snake.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 /*==============================
   Footer Style
@@ -1518,6 +1727,266 @@ footer {
 
 }
 
+
+/* ======================= */
+  /* Hero Section Styles */
+/* ===================== */
+
+.hero-section {
+  background-color: #D2E3DF; /* Light teal background from image */
+  
+  position: relative;
+  margin-bottom: 90px;
+  /* overflow: hidden; */
+  /* Curved background */
+  /* clip-path: ellipse(100% 100% at 50% 0%); */
+  &:after {
+    content: "";
+    clip-path: ellipse(60% 60% at 50% 0%); /* Increased radii for a larger, more circular curve */
+    position: absolute;
+    width: 100%;
+    bottom: -50px; /* Adjust to move the curve further down */
+    height: 50px; /* Increased height to show more of the circle */
+    background: #D2E3DF;
+  }
+}
+
+.hero-content {
+  text-align: left;
+  position: relative;
+  img{
+    transform: translateY(-30px);
+    margin-bottom: 1rem;
+  }
+  .color-word{
+      font-style: italic;
+      font-size: 32px;
+      color: #e50000;
+      font-weight: 300;
+    position: absolute;
+    left: calc(100% - 56%);
+    top: -8px;
+  }
+}
+
+.experience-text {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+.discover-text {
+  font-size: 22px;
+  line-height: 26px;
+  color: #262525;
+  margin-bottom: 40px;
+}
+
+.shop-now-button {
+  background-color: #ffeb3b;
+  color: #5A3F16;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 22px;
+  min-width: 248px;
+  padding-block: 25px;
+}
+
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+
+.hero-image-container img {
+  position: absolute;
+}
+
+/* Bottle floats upward slowly */
+.bottle-image {
+  height: 524px;
+  bottom: -75px;
+  right: 15%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  z-index: 5;
+  animation: float-up 6s ease-in-out infinite alternate;
+}
+
+/* Cap aligned with bottle */
+.cap-image {
+  width: 260px;
+  left: 0;
+    bottom: -15%;
+  /* transform: translate(-50%, -50%) rotate(15deg); */
+  z-index: 6;
+}
+
+/* Top palm leaf floats downward */
+.top-palm {
+  width: 40%;
+  top: 5%;
+  right: 0;
+  transform: translate(0%, 0%) rotate(0deg);
+  z-index: 4;
+  animation: float-topUp-rotate-20 6s ease-in-out infinite alternate;
+  filter: blur(2px);
+}
+
+@keyframes float-topUp-rotate-20 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  100% {
+    transform: translate(0%, -5%) rotate(10deg); /* float up + rotate */
+  }
+}
+
+/* Bottom palm leaf floats upward */
+.bottom-palm {
+  width: 190px;
+    left: 38%;
+    bottom: 0%;
+    z-index: 6;
+    animation: float-up-rotate-20 6s ease-in-out infinite alternate;
+}
+
+@keyframes float-up-rotate-20 {
+  0% {
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, 40%) rotate(10deg); /* moves up and rotates */
+  }
+}
+
+
+/* Left palm leaf floats downward */
+.left-palm {
+  width: 190px;
+  top: 37%;
+  left: 37%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  z-index: 5;
+  animation: float-down-rotate-20 6s ease-in-out infinite alternate;
+}
+@keyframes float-down-rotate-20 {
+  0% {
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, 40%) rotate(6deg); /* moves up and rotates */
+  }
+}
+/* Yellow circle floats */
+
+.yellow-circle {
+  width: 4%;
+  bottom: -12%;
+  left: 59%;
+  animation: float-circle 6s ease-in-out infinite alternate;
+  z-index: 5;
+}
+
+@keyframes float-circle {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(90deg); /* Rotate half circle */
+  }
+}
+
+
+
+/* Orange circle floats */
+.orange-circle {
+  width: 20px;
+  top: 36%;
+  left: 43%;
+  animation: float-up-rotate-to-zero 6s ease-in-out infinite alternate;
+}
+
+@keyframes float-up-rotate-to-zero {
+  0% {
+    transform: translateY(0px) rotate(-90deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(0deg);
+  }
+}
+
+
+/* Yellow rectangle */
+.banner-yellow-rec {
+  width: 4%;
+    bottom: 22%;
+    left: 33%;
+}
+
+/* Green rectangle */
+.banner-green-rec {
+  width: 30px;
+  right: 25%;
+  bottom: 50px;
+  z-index: 7;
+  animation: float-up-rotate 6s ease-in-out infinite alternate;
+  transform: rotate(45deg); /* start from 0deg or change as needed */
+}
+
+@keyframes float-up-rotate {
+  0% {
+    transform: translateY(0px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(-15deg); /* rotate left */
+  }
+}
+
+.banner-border-line {
+  width: 60px;
+  top: 17%;
+  left: 45%;
+  transform: translate(-50%, -50%) rotate(5deg);
+  z-index: 5;
+  animation: move-right-to-left 6s ease-in-out infinite alternate;
+}
+
+@keyframes move-right-to-left {
+  0% {
+    transform: translate(-50%, -50%) rotate(5deg) translateX(30px);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(5deg) translateX(0);
+  }
+}
+
+
+/* Float gently up and down */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Float upward animation */
+@keyframes float-up {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-10px) rotate(0deg); }
+}
+
+/* Float downward animation */
+@keyframes float-down {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(15px); }
+}
 
 @media(max-width:1024px) {
   .kalarity__Journal-sec {
