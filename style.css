@@ -1,5 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+     font-family: "Rubik", sans-serif;
 }
+
+/* Main Wrapper */
+.product-highlight {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+      background: #fbfbfb;
+}
+
+/* Top Section: Image + Text */
+.product-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.product-visual img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.product-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.product-info .accent {
+  color: #cc4444;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+.product-info >div  p{
+    font-size: 58px;
+}
+
+.product-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background-color: #ffd700;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e6c200;
+}
+
+/* Bottom Grid: Strains */
+.strain-grid ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.strain-grid li {
+  text-align: center;
+  width: 100px;
+}
+
+
+
+.strain-grid p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.strain-item {
+  background: transparent url('./assets/images/l-1.png') 0% 0% no-repeat padding-box;
+  width: 131px; /* adjust as needed */
+  height: 164px; /* adjust as needed */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  /* transition: all .4s ease;
+  border: 1px solid red; */
+}
+.strain-item:focus {
+  background-image: url('./assets/images/foccus.png') !important;
+}
+.strain-item:hover {
+  background-image: url('./assets/images/l2.png');
+}
+
