@@ -1,5 +1,325 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik !important;
 }
+.mb-40{
+  margin-bottom: 40px;
+}
+
+
+
+/* ///////////////////////
+----THE CLAM SECTION---
+////////////////////// */
+.section-the-calm {
+  height: 658px;
+  background: url('https://i.ibb.co/4g19HjF7/Mask-Group-6.png') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #ffffff;
+}
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+.the-calm-content {
+  max-width: 474px;
+  font-family: Rubik Mono One;
+}
+
+.calm-heading {
+  font-size: 75px;
+    font-weight: 400;
+    line-height: 65px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #FFFDE9;
+}
+
+.calm-heading br {
+  display: inline;
+}
+
+.calm-subheading {
+  font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 46px;
+    color: #FFFFFF;
+}
+
+.calm-description {
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.rush-button, 
+.calm-button {
+  color: #5A3F16;
+  font-weight: bold;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 248px;
+  background-color: #FFE600;
+  transition: background 0.3s ease;
+  margin-top: 24px;
+  margin-bottom: 11px;
+  height: 71px;
+}
+
+  .calm-note {
+    font-style: italic;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 19px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////
+----THE LIQUID SECTION---
+////////////////////// */
+
+.section-liquid-rush {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+}
+
+.rush-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.rush-left {
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  max-width: 584px;
+}
+
+.text-column {
+  font-family: Rubik !important;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.heading-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.large-letter {
+  font-size: 102px;
+  color: #628742;
+}
+
+.heading-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.rush-subheading {
+  font-size: 37px;
+    padding-left: 15px;
+    line-height: 50px;
+    color: #B23C3B;
+    margin: 0;
+    font-family: Rubik;
+}
+
+.rush-subheading span {
+  font-size: 55px;
+}
+
+.rush-mainheading {
+  font-size: 58px;
+  color: #628742;
+  font-weight: bold;
+  margin: 0;
+  font-family: Rubik;
+  line-height: 44px;
+
+}
+
+.rush-description {
+  font-size: 20px;
+  color: #333;
+  line-height: 28px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.rush-button {
+    color: #5A3F16;
+    font-weight: bold;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 248px;
+    background-color: #FFE600;
+    transition: background 0.3s ease;
+    margin-top: 24px;
+    height: 71px;
+}
+
+.rush-right {
+  flex: 1;
+  text-align: center;
+}
+
+.rush-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
+/* ///////////////////////
+----THE PRODUCT SECTION---
+////////////////////// */
+
+
+.product-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  padding: 20px;
+  width: calc(25% - 12px);
+  box-sizing: border-box;
+  border: 1px solid #E9E9E9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-image{
+  max-width: 268px;
+  height: 220px;
+}
+.product-image img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 6px;
+}
+.product-description{
+  text-align: center;
+  text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.price-variant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.price, .variant {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 27px;
+  color: #000000;
+}
+
+.product-name {
+  font-size: 16px;
+  color: #000;
+  line-height: 19px;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.stars {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stars li {
+  box-sizing: content-box;
+  font-family: Arial, sans-serif; /* Avoid emoji-like stars */
+  font-size: 16px;
+  width: 16px;
+  height: 15px;
+  line-height: 15px;
+}
+
+.stars li::before {
+  content: "★";
+  display: inline-block;
+  font-size: 20px;
+  width: 16px;
+  height: 15px;
+  line-height: 15px;
+  color: #ffc700;
+}
+
+.stars li.filled::before {
+  color: #ffc700;
+}
+
+.reviews {
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+}
+
+
+
+
+
+
