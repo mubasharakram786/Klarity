@@ -26,12 +26,11 @@ body{
   color: #ffffff;
 }
 .container-custom {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 .the-calm-content {
   max-width: 474px;
-  font-family: Rubik Mono One;
 }
 
 .calm-heading {
@@ -77,7 +76,7 @@ body{
   width: 248px;
   background-color: #FFE600;
   transition: background 0.3s ease;
-  margin-top: 24px;
+  /* margin-top: 24px; */
   margin-bottom: 11px;
   height: 71px;
 }
@@ -114,7 +113,6 @@ body{
 }
 
 .text-column {
-  font-family: Rubik !important;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -142,7 +140,6 @@ body{
     line-height: 50px;
     color: #B23C3B;
     margin: 0;
-    font-family: Rubik;
 }
 
 .rush-subheading span {
@@ -154,7 +151,6 @@ body{
   color: #628742;
   font-weight: bold;
   margin: 0;
-  font-family: Rubik;
   line-height: 44px;
 
 }
@@ -165,6 +161,7 @@ body{
   line-height: 28px;
   margin-bottom: 10px;
   font-weight: 300;
+  max-width: 536px;
 }
 
 .rush-button {
@@ -178,7 +175,6 @@ body{
     width: 248px;
     background-color: #FFE600;
     transition: background 0.3s ease;
-    margin-top: 24px;
     height: 71px;
 }
 
@@ -249,15 +245,22 @@ body{
 
 .price, .variant {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 27px;
   color: #000000;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  word-break: break-all;
 }
 
 .product-name {
   font-size: 16px;
   color: #000;
   line-height: 19px;
+
 }
 
 .rating {
@@ -304,30 +307,17 @@ body{
 }
 
 
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
-}
-
 /* CUSTOM UTILITY CLASS*/
 
 .product-info {
   flex: 1;
   min-width: 300px;
-  margin-bottom: 40px;
 
 }
 
 .product-info div {
   font-size: 2.2rem;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 
   p {
     font-size: 58px;
@@ -530,8 +520,8 @@ body{
 .cart-icon {
   background-color: #ffeb3b;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 55px;
+  width: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -818,37 +808,28 @@ Amir Section Style
 
 .faq-title {
   margin-bottom: 30px;
-  max-width: 514px;
+  max-width: 545px;
   position: relative;
-
+  padding-left: 20px;
 }
 .faq-title::before {
     position: absolute;
-    content: '';
-    width: 100%;
-    height: 55%;
-    background-image: url(/assets/images/y-balls.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    right: 28px;
-    top: 54px;
+    content: url(/assets/images/y-balls.png);
+    left: 0;
+    top: 65px;
 }
 .faq-title::after{
    bottom: -13px;
-    left: -32px;
+    left: 20px;
     position: absolute;
-    content: '';
+    content:  url(/assets/images/snake.png);
     width: 35%;
     height: 14%;
-    background-image: url(/assets/images/snake.png);
-    background-size: contain;
-    background-repeat: no-repeat;
 } 
 .faq-title h2 {
   font-size: 32px;
-  line-height: 43px;
+  line-height: 38px;
   color: #414141;
-  font-family: "Rubik", sans-serif;
   font-weight: 300;
 }
 
@@ -883,13 +864,11 @@ Amir Section Style
   text-transform: capitalize;
   color: #000000;
   line-height: 51px;
-  font-family: "Rubik", sans-serif;
 }
 
 .faq-container {
   max-width: 960px;
   margin: 0 auto;
-  font-family: "Rubik", sans-serif;
 }
 
 .accordion {
@@ -899,8 +878,6 @@ Amir Section Style
 
 .accordion_item {
   background: #F8F8F8;
-  font-family: "Rubik", sans-serif;
-  /* border: 1px solid #E8E8E8; */
   margin-bottom: 10px;
   overflow: hidden;
   border-radius: 10px;
@@ -967,7 +944,6 @@ Amir Section Style
 
 .kalarity__intro {
   background-color: #FBFBFB;
-  font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   text-align: center;
   padding: 25px 0;
@@ -1061,7 +1037,6 @@ Amir Section Style
   display: flex;
   align-items: end;
   justify-content: space-between;
-  font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   margin-bottom: 32px;
 }
@@ -1103,7 +1078,6 @@ Amir Section Style
   color: #F2E357;
   font-size: 18px;
   border-radius: 10px;
-  font-family: "Rubik", sans-serif;
   font-weight: bold;
   cursor: pointer;
   position: relative;
@@ -1153,7 +1127,6 @@ Amir Section Style
 }
 
 .Journal-slider-card .slider__desc {
-  font-family: "Rubik", sans-serif;
   padding: 10px;
 }
 
@@ -1244,6 +1217,7 @@ Amir Section Style
     color: #000;
     position: relative;
     display: inline-block;
+    text-transform: uppercase;
     &::before{
       content: url("./assets/images/shape-arrow.svg");
       position: absolute;
@@ -1253,7 +1227,7 @@ Amir Section Style
     &::after{
       content: url("./assets/images/half-fill-circle.svg");
       position: absolute;
-      right: -27px;
+      right: -35px;
       bottom: 8px;
     }
   }
@@ -1267,7 +1241,7 @@ Amir Section Style
     font-size: 16px;
     color: #878787;
     line-height: 19px;
-    max-width: 615px; 
+    max-width: 585px; 
     position: relative;
     &::before{
       content: url("./assets/images/snake.png");
@@ -1283,7 +1257,7 @@ Amir Section Style
   &::before{
     content: url("./assets/images/circle-plus.svg");
     position: absolute;
-    bottom: 0;
+    bottom: 7px;
     left: -16px;
   }
 }
@@ -1295,8 +1269,13 @@ Amir Section Style
 
 .top-picks-card {
   border: 1px solid #f8f8f8;
-  height: 556px;
   flex: 0 0 calc(25% - 11px);
+  &:hover{
+    border-color: #E8E8E8;
+    .qty-dropdown{
+      filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+    }
+  } 
   .qty-dropdown{
     height: 48px;
     background-color: #F8F8F8;
@@ -1305,6 +1284,7 @@ Amir Section Style
     color: #4e4e4e;
     border-radius: 6px;
     margin-bottom: 20px;
+    transition: filter .25s linear;
   }
   .medics-selection{
     margin-bottom: 16px;
@@ -1320,9 +1300,17 @@ Amir Section Style
       color: #414141;
 
     }
-    input:checked + span{
-      font-weight: bold;
-      color: #000;
+    input{
+      accent-color: #000;
+      width: 16px;
+      height: 16px;
+     &:checked + span{
+        font-weight: bold;
+        color: #000;
+      }
+      &:disabled{
+        accent-color: #e8e8e8;
+      }
     }
   }
 }
@@ -1347,10 +1335,12 @@ Amir Section Style
   color: #000;
   line-height:27px;
   margin-bottom:23px;
-  white-space: nowrap;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
   text-overflow: ellipsis;
-  word-break: break-word;
+  word-break: break-all;
 }
 
 .top-picks-product-price {
@@ -1372,7 +1362,7 @@ margin-bottom:16px;
 }
 
 .product-reviews {
-  padding-right: 20px;
+  max-width: 100px;
 }
 
 .total-reviews-result {
@@ -1387,6 +1377,7 @@ margin-bottom:16px;
   gap: 3px;
   margin-bottom:10px;
   .fa-star{
+    font-size: 14px;
       color:#FFC400;
   }
 }
@@ -1425,25 +1416,7 @@ margin-bottom:16px;
     min-height: 418px;
 }
 
-.product-info {
-  flex: 1;
-  min-width: 300px;
-  margin-bottom: 40px;
-}
-.product-info div {
-  font-size: 2.2rem;
-  margin-bottom: 3rem;
-  p {
-    font-size: 58px;
-    color: #628742;
-      transform: translateY(-10px);
-      font-weight: 600;
-      .big-M{
-    font-size: 95px;
-    font-weight: 300;
-  }
-  }
-}
+
 .product-info .accent {
   color: #B23C3B;
   /* font-weight: 300; */
@@ -1534,9 +1507,9 @@ margin-bottom:16px;
    align-items: unset;
 }
 .about-kratom{
-  padding: 35px 40px;
+  padding: 35px 40px 40px;
  h1{
-  max-width: 386px;
+  /* max-width: 386px; */
   span{
     font-size: 32px;
     font-weight: 300;
@@ -1595,7 +1568,7 @@ footer {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1280px !important;
   margin: 0 auto;
 }
 
@@ -1605,20 +1578,20 @@ footer {
 
 .footer-box {
   gap: 40px;
-}
-
-.logo {
-  max-width: 270px;
-  height: 83px;
-  margin-bottom: 40px;
-  transform: translateY(10px);
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .logo {
+    max-width: 270px;
+    height: 83px;
+    margin-bottom: 40px;
+    transform: translateY(-10px);
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
+
 
 
 .text {
@@ -1661,7 +1634,6 @@ footer {
     text-decoration: none;
     color: #000000;
     font-size: 16px;
-    font-weight: 500;
     display: inline-block;
     text-transform: capitalize;
   }
@@ -1756,15 +1728,13 @@ footer {
   position: relative;
   img{
     transform: translateY(-30px);
-    margin-bottom: 1rem;
   }
   .color-word{
       font-style: italic;
       font-size: 32px;
       color: #e50000;
-      font-weight: 300;
     position: absolute;
-    left: calc(100% - 56%);
+    left: calc(100% - 54%);
     top: -8px;
   }
 }
@@ -1775,6 +1745,8 @@ footer {
   margin-bottom: 0;
   display: flex;
   align-items: center;
+  position: relative;
+  top: 10px;
 }
 
 
@@ -1783,6 +1755,8 @@ footer {
   line-height: 26px;
   color: #262525;
   margin-bottom: 40px;
+  position: relative;
+  top: -10px;
 }
 
 .shop-now-button {
