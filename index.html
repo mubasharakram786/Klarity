@@ -17,14 +17,266 @@
 </head>
 <body>
     <!-- follow commit before and end of your section -->
-
-    
+    <header class="sticky-header py-3 border-bottom position-relative kraity-header">
+        <div class="container d-flex align-items-center justify-content-between px-4 position-relative">
+          <!-- Left Nav -->
+          <div class="d-flex align-items-center gap-3">
+           
+              <nav class="d-none d-md-flex gap-4">
+                  <a href="#" class="nav-item  text-decoration-none active">
+                    <img src="./assets/images/nav-img.png" alt="Home Icon" />
+                    <span>Home</span>
+                  </a>
+                  <a href="#" class="nav-item  text-decoration-none">
+                    <img src="./assets/images/nav-img.png" alt="Brands Icon" />
+                    <span>Brands</span>
+                  </a>
+                  <a href="#" class="nav-item  text-decoration-none">
+                    <img src="./assets/images/nav-img.png" alt="Offers Icon" />
+                    <span>Offers</span>
+                  </a>
+                  <a href="#" class="nav-item  text-decoration-none">
+                    <img src="./assets/images/nav-img.png" alt="Strains Icon" />
+                    <span>Strains</span>
+                  </a>
+                </nav>
+                
+          </div>
+      
+          <!-- Center Logo -->
+          <div class="text-center middle-nav">
+            <div class="logo"><img src="./assets/images/logo.svg" /></div>
+            <div class="logo-bottom">
+              <a href="#" class="text_dark text-decoration-none me-2">Contact Us</a>
+              <a href="#" class="text_dark text-decoration-none me-2">Login</a>
+              <span class="text_dark text-sm">
+                <i class="fa-solid fa-phone me-1 "></i>
+                (213) 281-7400
+            </span>
+            </div>
+          </div>
+      
+          <!-- Right Menu -->
+          <div class="d-flex align-items-center gap-4">
+            <nav class="d-none d-md-flex gap-4">
+              <a href="#" class="nav-item  text-decoration-none"><img src="./assets/images/nav-img.png" />Capsules</a>
+              <a href="#" class="nav-item  text-decoration-none"><img src="./assets/images/nav-img.png" />Powders</a>
+              <a href="#" class="nav-item  text-decoration-none"><img src="./assets/images/nav-img.png" />Shots</a>
+              <a href="#" class="header-search-icon  text-decoration-none"><i class="text_dark fa-solid fa-magnifying-glass"></i></a>
+            </nav>
+          </div>
+        </div>
+      
+        <!-- Cart Icon -->
+        <div class="cart-wrapper" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar">
+          <div class="text-end">
+              <div class="text_dark ">$449.89</div>
+              <div class="text-dark  fw-bold font-18">
+                <i class="fa-solid fa-angle-left"></i>
+                6 items
+            </div>
+            </div>
+          <div class="cart-icon">
+            <img src="./assets/images/cart-icon.png" alt="cart icon">
+          </div>
+        </div>
+      </header>
+      <!-- 🛒 Cart Sidebar -->
+      <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="cartSidebar">
+        <div class="cart-header">
+          <div class="d-flex align-items-center">
+            <span class="fw-normal text_dark me-2">Recently Added</span>
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="text-end me-2">
+                <div class="text_dark fw-normal">$449.89</div>
+                <div class="text-dark  fw-bold font-18">
+                  6 items
+              </div>
+            </div>
+            <div class="cart-icon-small cursor-pointer" class="btn-close" data-bs-dismiss="offcanvas">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+         
+        </div>
+        <div class="offcanvas-body">
+          <!-- Products Table -->
+          <div class="table-responsive">
+            <table class="table table-sm align-middle">
+              <thead class="bg-e8e8e8">
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Price</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                      <span class="product-title">
+                          Maeng Da 40 Capsules
+                      </span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="qty-controls">
+                      <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                      <span class="product-qty">3</span>
+                      <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                    </div>
+                  </td>
+                  <td class="product-price">$29.97</td>
+                  <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                      <span class="product-title">
+                        Trainwreck 1000 Capsules
+                    </span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="qty-controls">
+                      <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                      <span class="product-qty">2</span>
+                      <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                    </div>
+                  </td>
+                  <td class="product-price">$199.98</td>
+                  <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                      <span class="product-title">
+                        Gold 75 Capsules
+                    </span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="qty-controls">
+                      <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                      <span class="product-qty">1</span>
+                      <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                    </div>
+                  </td>
+                  <td class="product-price">$16.99</td>
+                  <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                      <span class="product-title">
+                          Green Malay 150 Capsules
+                    </span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="qty-controls">
+                      <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                      <span class="product-qty">1</span>
+                      <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                    </div>
+                  </td>
+                  <td class="product-price">$20.99</td>
+                  <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                      <span class="product-title">
+                          White Borneo 300 Capsules
+                    </span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="qty-controls">
+                      <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                      <span class="product-qty">1</span>
+                      <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                    </div>
+                  </td>
+                  <td class="product-price">$36.99</td>
+                  <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                      <span class="product-title">
+                          White Thai 500 Capsules
+                    </span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="qty-controls">
+                      <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                      <span class="product-qty">3</span>
+                      <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                    </div>
+                  </td>
+                  <td class="product-price">$164.97</td>
+                  <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      
+          <!-- Subtotal -->
+          <div class="d-flex justify-content-between p-3 border-top">
+            <span class="text_dark fw-medium">Subtotal</span>
+            <span class="text_dark fw-medium text-break ps-2">$469.89</span>
+          </div>
+      
+          <!-- Apply Coupon -->
+          <div class="p-3 coupen-area">
+            <label class=" coupon-heading fw-medium">Apply Coupon</label>
+            <div class=" d-flex flex-column">
+              <input type="text" class=" coupon-box font-18 fw-semibold"  value="WLCM10">
+              <small class="bonus-text">10% Welcome Bonus</small>
+            </div>
+           
+          </div>
+      
+          <!-- Discount -->
+          <div class="d-flex justify-content-between p-3 text-success">
+            <span class="text_dark fw-medium">Discount</span>
+            <span class="text_dark fw-semibold text-break ps-2">-$46.98</span>
+          </div>
+      
+          <!-- Grand Total -->
+          <div class="d-flex justify-content-between p-3 border-top grand-total-row">
+            <span class="text_dark fw-extrabold">Grand Total</span>
+            <span class="text_dark fw-extrabold text-break ps-2">$422.91</span>
+          </div>
+      
+          <!-- Available Coupons -->
+          <span class="fw-semibold font-18 text_dark mb-3 ps-3 d-block">Available Coupons</span>
+          <div class="available-coupons px-3 ">
+            <span class="badge-coupon badge-green">10% Welcome Bonus</span>
+            <span class="badge-coupon badge-grey">3% Halloween</span>
+          </div>
+      
+          <!-- Checkout Button -->
+        </div>
+        <button class="checkout-button">Checkout</button>
+      </div>
 
   <div class="product-highlight">
     <!-- TOP PART -->
     <div class="product-wrapper d-flex">
       <div class="product-visual">
-        <img src="./assets/images/klarity.png" alt="Klarty Kratom Maeng Da Capsules" />
+        <img src="./assets/imagess/klarity.png" alt="Klarty Kratom Maeng Da Capsules" />
       </div>
       <div class="product-info">
         <div><span class="accent">Power-up yourself</span>
