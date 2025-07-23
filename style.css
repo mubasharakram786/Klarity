@@ -8,20 +8,19 @@
 /* CUSTOM UTILITY CLASS*/
 .d-flex{
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* Main Wrapper */
 .product-highlight {
-  max-width: 1280px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 4rem 10px;
 }
 
 /* Top Section: Image + Text */
 .product-wrapper {
-  flex-wrap: wrap;
   align-items: center;
-  /* gap: 2rem; */
   justify-content: center;
   margin-bottom: 2rem;
 }
@@ -29,7 +28,8 @@
 .product-visual {
   width:100%;
   max-width: 698px;
-  height: 418px;
+  height: auto;
+  min-height: 418px;
 }
 img {
   max-width: 100%;
@@ -90,7 +90,7 @@ img {
 }
 .strain-grid{
     gap: 3rem;
-    padding-inline-start: 40px;
+  
 }
 
 /* DONT CHANGE THIS ORDER */
