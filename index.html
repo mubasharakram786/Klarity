@@ -1,278 +1,949 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klarity/Kratom</title>
+    <title>Klarity Kratom</title>
     <link rel="stylesheet" href="./style.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+          <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!--Rubik Font Family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
 
-    <!-- ///////////////////////
+<body>
+    <!-- follow commit before and end of your section -->
+    <header class="sticky-header py-3 border-bottom position-relative kraity-header">
+        <div class="container d-flex align-items-center justify-content-between px-4 position-relative">
+            <!-- Left Nav -->
+            <div class="d-flex align-items-center gap-3">
+
+                <nav class="d-none d-md-flex gap-4">
+                    <a href="#" class="nav-item  text-decoration-none active">
+                        <img src="./assets/images/nav-img.png" alt="Home Icon" />
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="nav-item  text-decoration-none">
+                        <img src="./assets/images/nav-img.png" alt="Brands Icon" />
+                        <span>Brands</span>
+                    </a>
+                    <a href="#" class="nav-item  text-decoration-none">
+                        <img src="./assets/images/nav-img.png" alt="Offers Icon" />
+                        <span>Offers</span>
+                    </a>
+                    <a href="#" class="nav-item  text-decoration-none">
+                        <img src="./assets/images/nav-img.png" alt="Strains Icon" />
+                        <span>Strains</span>
+                    </a>
+                </nav>
+
+            </div>
+
+            <!-- Center Logo -->
+            <div class="text-center middle-nav">
+                <div class="logo"><img src="./assets/images/logo.svg" /></div>
+                <div class="logo-bottom">
+                    <a href="#" class="text_dark text-decoration-none me-2">Contact Us</a>
+                    <a href="#" class="text_dark text-decoration-none me-2">Login</a>
+                    <span class="text_dark text-sm">
+                        <i class="fa-solid fa-phone me-1 "></i>
+                        (213) 281-7400
+                    </span>
+                </div>
+            </div>
+
+            <!-- Right Menu -->
+            <div class="d-flex align-items-center gap-4">
+                <nav class="d-none d-md-flex gap-4">
+                    <a href="#" class="nav-item  text-decoration-none"><img
+                            src="./assets/images/nav-img.png" />Capsules</a>
+                    <a href="#" class="nav-item  text-decoration-none"><img
+                            src="./assets/images/nav-img.png" />Powders</a>
+                    <a href="#" class="nav-item  text-decoration-none"><img
+                            src="./assets/images/nav-img.png" />Shots</a>
+                    <a href="#" class="header-search-icon  text-decoration-none"><i
+                            class="text_dark fa-solid fa-magnifying-glass"></i></a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Cart Icon -->
+        <div class="cart-wrapper" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar">
+            <div class="text-end">
+                <div class="text_dark ">$449.89</div>
+                <div class="text-dark  fw-bold font-18">
+                    <i class="fa-solid fa-angle-left"></i>
+                    6 items
+                </div>
+            </div>
+            <div class="cart-icon">
+                <img src="./assets/images/cart-icon.png" alt="cart icon">
+            </div>
+        </div>
+    </header>
+    <!-- 🛒 Cart Sidebar -->
+    <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="cartSidebar">
+        <div class="cart-header">
+            <div class="d-flex align-items-center">
+                <span class="fw-normal text_dark me-2">Recently Added</span>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="text-end me-2">
+                    <div class="text_dark fw-normal">$449.89</div>
+                    <div class="text-dark  fw-bold font-18">
+                        6 items
+                    </div>
+                </div>
+                <div class="cart-icon-small cursor-pointer" class="btn-close" data-bs-dismiss="offcanvas">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="offcanvas-body">
+            <!-- Products Table -->
+            <div class="table-responsive">
+                <table class="table table-sm align-middle">
+                    <thead class="bg-e8e8e8">
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                                    <span class="product-title">
+                                        Maeng Da 40 Capsules
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="qty-controls">
+                                    <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                                    <span class="product-qty">3</span>
+                                    <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                                </div>
+                            </td>
+                            <td class="product-price">$29.97</td>
+                            <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                                    <span class="product-title">
+                                        Trainwreck 1000 Capsules
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="qty-controls">
+                                    <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                                    <span class="product-qty">2</span>
+                                    <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                                </div>
+                            </td>
+                            <td class="product-price">$199.98</td>
+                            <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                                    <span class="product-title">
+                                        Gold 75 Capsules
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="qty-controls">
+                                    <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                                    <span class="product-qty">1</span>
+                                    <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                                </div>
+                            </td>
+                            <td class="product-price">$16.99</td>
+                            <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                                    <span class="product-title">
+                                        Green Malay 150 Capsules
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="qty-controls">
+                                    <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                                    <span class="product-qty">1</span>
+                                    <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                                </div>
+                            </td>
+                            <td class="product-price">$20.99</td>
+                            <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                                    <span class="product-title">
+                                        White Borneo 300 Capsules
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="qty-controls">
+                                    <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                                    <span class="product-qty">1</span>
+                                    <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                                </div>
+                            </td>
+                            <td class="product-price">$36.99</td>
+                            <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/40" alt="Product" class="me-2">
+                                    <span class="product-title">
+                                        White Thai 500 Capsules
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="qty-controls">
+                                    <button class="btn btn-sm btn-outline-secondary px-2">-</button>
+                                    <span class="product-qty">3</span>
+                                    <button class="btn btn-sm btn-outline-secondary px-2">+</button>
+                                </div>
+                            </td>
+                            <td class="product-price">$164.97</td>
+                            <td class="cursor-pointer"><i class="fa-solid fa-xmark"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Subtotal -->
+            <div class="d-flex justify-content-between p-3 border-top">
+                <span class="text_dark fw-medium">Subtotal</span>
+                <span class="text_dark fw-medium text-break ps-2">$469.89</span>
+            </div>
+
+            <!-- Apply Coupon -->
+            <div class="p-3 coupen-area">
+                <label class=" coupon-heading fw-medium">Apply Coupon</label>
+                <div class=" d-flex flex-column">
+                    <input type="text" class=" coupon-box font-18 fw-semibold" value="WLCM10">
+                    <small class="bonus-text">10% Welcome Bonus</small>
+                </div>
+
+            </div>
+
+            <!-- Discount -->
+            <div class="d-flex justify-content-between p-3 text-success">
+                <span class="text_dark fw-medium">Discount</span>
+                <span class="text_dark fw-semibold text-break ps-2">-$46.98</span>
+            </div>
+
+            <!-- Grand Total -->
+            <div class="d-flex justify-content-between p-3 border-top grand-total-row">
+                <span class="text_dark fw-extrabold">Grand Total</span>
+                <span class="text_dark fw-extrabold text-break ps-2">$422.91</span>
+            </div>
+
+            <!-- Available Coupons -->
+            <span class="fw-semibold font-18 text_dark mb-3 ps-3 d-block">Available Coupons</span>
+            <div class="available-coupons px-3 ">
+                <span class="badge-coupon badge-green">10% Welcome Bonus</span>
+                <span class="badge-coupon badge-grey">3% Halloween</span>
+            </div>
+
+            <!-- Checkout Button -->
+        </div>
+        <button class="checkout-button">Checkout</button>
+    </div>
+       <!-- ///////////////////////
 ----THE LIQUID SECTION---
 ////////////////////// -->
-    <section class="section-liquid-rush">
-        <div class="rush-container container">
-            <div class="rush-left">
-                <div class="text-column">
-                  <div class="heading-wrapper">
-                    <span class="large-letter">L</span>
-                    <div class="heading-text">
-                      <p class="rush-subheading">
-                        <span>U</span>nleash the
-                      </p>
-                      <p class="rush-mainheading">
-                        iquid Rush
-                      </p> 
-                    </div>
-                  </div>
-                  <p class="rush-description">
-                    Experience Klarity like never before with our most intense extract yet.
-                    Feel the wave of calm energy kick in—no crash, no claims, just pure focus in every drop.
+<section class="section-liquid-rush">
+    <div class="rush-container container">
+        <div class="rush-left">
+            <div class="text-column">
+              <div class="heading-wrapper">
+                <span class="large-letter">L</span>
+                <div class="heading-text">
+                  <p class="rush-subheading">
+                    <span>U</span>nleash the
                   </p>
+                  <p class="rush-mainheading">
+                    iquid Rush
+                  </p> 
                 </div>
-                <button class="rush-button">Shop Now</button>
               </div>
-          <div class="rush-right">
-            <img src="https://i.ibb.co/G4tVZZ8H/banner-2.png" alt="Liquid Rush Banner" class="rush-image">
-          </div>
-        </div>
-      </section>
-      
-      <!-- ///////////////////////
-      ----THE CLAM SECTION---
-      ////////////////////// -->
-
-    <section class="section-the-calm mb-40">
-        <div class="container">
-          <div class="the-calm-content">
-            <h1 class="calm-heading">
-              FEEL<br>the CALM
-            </h1>
-            <div>
-              <h2 class="calm-subheading">EMBRACE THE KLARITY</h2>
-              <p class="calm-description">
-                Naturally elevate your mood with Klarity Kratom – trusted, pure, and powerful Red Bali capsules for a better you.
+              <p class="rush-description">
+                Experience Klarity like never before with our most intense extract yet.
+                Feel the wave of calm energy kick in—no crash, no claims, just pure focus in every drop.
               </p>
             </div>
-            <div>
-              <button class="calm-button">Try Klarity Today!</button>
-              <p class="calm-note">YOUR PEACE BEGINS NOW!</p>
+            <button class="rush-button">Shop Now</button>
+          </div>
+      <div class="rush-right">
+        <img src="https://i.ibb.co/G4tVZZ8H/banner-2.png" alt="Liquid Rush Banner" class="rush-image">
+      </div>
+    </div>
+  </section>
+  
+  <!-- ///////////////////////
+  ----THE CLAM SECTION---
+  ////////////////////// -->
+
+<section class="section-the-calm mb-40">
+    <div class="container">
+      <div class="the-calm-content">
+        <h1 class="calm-heading">
+          FEEL<br>the CALM
+        </h1>
+        <div>
+          <h2 class="calm-subheading">EMBRACE THE KLARITY</h2>
+          <p class="calm-description">
+            Naturally elevate your mood with Klarity Kratom – trusted, pure, and powerful Red Bali capsules for a better you.
+          </p>
+        </div>
+        <div>
+          <button class="calm-button">Try Klarity Today!</button>
+          <p class="calm-note">YOUR PEACE BEGINS NOW!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ///////////////////////
+  ----THE PRODUCT SECTION---
+  ////////////////////// -->
+
+<section class="section-product">
+    <div class="product-wrapper container">
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Gold Capsules" />
+            </div>
+            <div class="product-description">
+                <div class="product-info">
+                    <div class="price-variant">
+                        <h2 class="price">$9.99</h2>
+                        <p class="variant">Gold</p>
+                    </div>
+                    <p class="product-name">Capsules</p>
+                </div>
+                <div class="rating">
+                    <ul class="stars" aria-label="5 out of 5 stars">
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                    </ul>
+                    <p class="reviews">101 Customer reviews</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Red Bali Capsules" />
+            </div>
+            <div class="product-description">
+                <div class="product-info">
+                    <div class="price-variant">
+                        <h2 class="price">$9.99</h2>
+                        <p class="variant">Red Bali</p>
+                    </div>
+                    <p class="product-name">Capsules</p>
+                </div>
+                <div class="rating">
+                    <ul class="stars" aria-label="5 out of 5 stars">
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                    </ul>
+                    <p class="reviews">98 Customer reviews</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Trainwreck Capsules" />
+            </div>
+            <div class="product-description">
+                <div class="product-info">
+                    <div class="price-variant">
+                        <h2 class="price">$9.99</h2>
+                        <p class="variant">Trainwreck</p>
+                    </div>
+                    <p class="product-name">Capsules</p>
+                </div>
+                <div class="rating">
+                    <ul class="stars" aria-label="5 out of 5 stars">
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                    </ul>
+                    <p class="reviews">113 Customer reviews</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Gold Capsules" />
+            </div>
+            <div class="product-description">
+                <div class="product-info">
+                    <div class="price-variant">
+                        <h2 class="price">$9.99</h2>
+                        <p class="variant">Gold</p>
+                    </div>
+                    <p class="product-name">Capsules</p>
+                </div>
+                <div class="rating">
+                    <ul class="stars" aria-label="5 out of 5 stars">
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                    </ul>
+                    <p class="reviews">101 Customer reviews</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Red Bali Capsules" />
+            </div>
+            <div class="product-description">
+                <div class="product-info">
+                    <div class="price-variant">
+                        <h2 class="price">$9.99</h2>
+                        <p class="variant">Red Bali</p>
+                    </div>
+                    <p class="product-name">Capsules</p>
+                </div>
+                <div class="rating">
+                    <ul class="stars" aria-label="5 out of 5 stars">
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                    </ul>
+                    <p class="reviews">98 Customer reviews</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Trainwreck Capsules" />
+            </div>
+            <div class="product-description">
+                <div class="product-info">
+                    <div class="price-variant">
+                        <h2 class="price">$9.99</h2>
+                        <p class="variant">Trainwreck</p>
+                    </div>
+                    <p class="product-name">Capsules</p>
+                </div>
+                <div class="rating">
+                    <ul class="stars" aria-label="5 out of 5 stars">
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                    </ul>
+                    <p class="reviews">113 Customer reviews</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Gold Capsules" />
+            </div>
+            <div class="product-description">
+                <div class="product-info">
+                    <div class="price-variant">
+                        <h2 class="price">$9.99</h2>
+                        <p class="variant">Gold</p>
+                    </div>
+                    <p class="product-name">Capsules</p>
+                </div>
+                <div class="rating">
+                    <ul class="stars" aria-label="5 out of 5 stars">
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                    </ul>
+                    <p class="reviews">101 Customer reviews</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Trainwreck Capsules" />
+            </div>
+            <div class="product-description">
+                <div class="product-info">
+                    <div class="price-variant">
+                        <h2 class="price">$9.99</h2>
+                        <p class="variant">Trainwreck</p>
+                    </div>
+                    <p class="product-name">Capsules</p>
+                </div>
+                <div class="rating">
+                    <ul class="stars" aria-label="5 out of 5 stars">
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                        <li class="filled"></li>
+                    </ul>
+                    <p class="reviews">113 Customer reviews</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <div class="product-highlight">
+        <!-- TOP PART -->
+        <div class="product-wrapper d-flex">
+            <div class="product-visual">
+                <img src="./assets/imagess/klarity.png" alt="Klarty Kratom Maeng Da Capsules" />
+            </div>
+            <div class="product-info">
+                <div><span class="accent">Power-up yourself</span>
+                    <p><span class="big-M">M</span>aeng Da</p>
+                </div>
+                <p>
+                    Experience Klarty like never before with our most intense extract yet.
+                    Feel the wave of calm energy kick in—no crash, no claims, just pure focus in every drop.
+                </p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <!-- Bottom part -->
+        <div class="strain-grid d-flex">
+            <div class="strain-item maeng-da" tabindex="0">
+            </div>
+
+            <div class="strain-item red-bali" tabindex="0">
+            </div>
+
+            <div class="strain-item gold" tabindex="0">
+            </div>
+
+            <div class="strain-item trainwreck" tabindex="0">
+            </div>
+
+            <div class="strain-item green-malay" tabindex="0">
+            </div>
+
+            <div class="strain-item white-borneo" tabindex="0">
+            </div>
+
+            <div class="strain-item white-thai" tabindex="0">
+            </div>
+
+
+        </div>
+    </div>
+    <section class="kalarity__Faq">
+        <div class="kalarity__container">
+          <div class="faq-title">
+    
+            <h2>Got Questions?</h2>
+            <h3>KLARITY KRATOM</h3>
+            <h3>ANSWERS YOU CAN TRUST</h3>
+          </div>
+    
+          <div class="faq-container">
+            <div class="accordion">
+              <div class="accordion_item">
+                <button class="accordion_button">
+                  <span class="question-text">
+                    <span class="question-number">1.</span>
+                    What is Kratom?
+                  </span>
+                  <div class="accordion-icon">
+                      <i class="fa-solid fa-angle-down icon"></i>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <p>Can I mix Kratom with other supplements or medications?Kratom (Mitragyna speciosa) is a tropical plant native to Southeast Asia, traditionally used for its natural energy-boosting and calming properties. Klarity Kratom uses premium, lab-tested Kratom leaf powder in capsule and powder form.</p>
+                </div>
+              </div>
+    
+              <div class="accordion_item">
+                <button class="accordion_button">
+                  <span class="question-text">
+                    <span class="question-number">2.</span>
+                    What makes Klarity Kratom different?
+                  </span>
+                   <div class="accordion-icon">
+                      <i class="fa-solid fa-angle-down icon"></i>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <p>Content goes here...</p>
+                </div>
+              </div>
+    
+              <div class="accordion_item">
+                <button class="accordion_button">
+                  <span class="question-text">
+                    <span class="question-number">3.</span>
+                    What are the effects of Maeng Da, Gold, Red Bali, and
+                    Trainwreck
+                    strains?
+                  </span>
+                 <div class="accordion-icon">
+                      <i class="fa-solid fa-angle-down icon"></i>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <p>Content goes here...</p>
+                </div>
+              </div>
+    
+              <div class="accordion_item">
+                <button class="accordion_button">
+                  <span class="question-text">
+                    <span class="question-number">4.</span>
+                    How do I choose the right strain?
+                  </span>
+                  <div class="accordion-icon">
+                      <i class="fa-solid fa-angle-down icon"></i>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <p>Content goes here...</p>
+                </div>
+              </div>
+    
+              <div class="accordion_item">
+                <button class="accordion_button">
+                  <span class="question-text">
+                    <span class="question-number">5.</span>
+                    How many capsules should I take?
+                  </span>
+                  <div class="accordion-icon">
+                      <i class="fa-solid fa-angle-down icon"></i>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <p>Content goes here...</p>
+                </div>
+              </div>
+    
+              <div class="accordion_item">
+                <button class="accordion_button">
+                  <span class="question-text">
+                    <span class="question-number">6.</span>
+                    Is Klarity Kratom lab-tested?
+                  </span>
+                <div class="accordion-icon">
+                      <i class="fa-solid fa-angle-down icon"></i>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <p>Content goes here...</p>
+                </div>
+              </div>
+    
+              <div class="accordion_item">
+                <button class="accordion_button">
+                  <span class="question-text">
+                    <span class="question-number">7.</span>
+                    Can I take Kratom every day?
+                  </span>
+                  <div class="accordion-icon">
+                      <i class="fa-solid fa-angle-down icon"></i>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <p>Content goes here...</p>
+                </div>
+              </div>
+    
+              <div class="accordion_item">
+                <button class="accordion_button">
+                  <span class="question-text">
+                    <span class="question-number">8.</span>
+                    Will Kratom show up on a drug test?
+                  </span>
+                   <div class="accordion-icon">
+                      <i class="fa-solid fa-angle-down icon"></i>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <p>Content goes here...</p>
+                </div>
+              </div>
+    
+              <div class="accordion_item">
+                <button class="accordion_button">
+                  <span class="question-text">
+                    <span class="question-number">9.</span>
+                    Is Klarity Kratom legal
+                  </span>
+                  <div class="accordion-icon">
+                      <i class="fa-solid fa-angle-down icon"></i>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <p>Content goes here...</p>
+                </div>
+              </div>
+    
+              <div class="accordion_item">
+                 <button class="accordion_button">
+                  <span class="question-text">
+                    <span class="question-number">10.</span>
+                   Can I mix Kratom with other supplements or
+                  medications?
+                  </span>
+                  <div class="accordion-icon">
+                      <i class="fa-solid fa-angle-down icon"></i>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <p>Content goes here...</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-
-      <!-- ///////////////////////
-      ----THE PRODUCT SECTION---
-      ////////////////////// -->
-
-    <section class="section-product">
-        <div class="product-wrapper container">
+      <section class="kalarity__intro">
+        <div class="kalarity__container">
+          <div class="kalarity__icon">
+            <img src="./assets/images/kalarity-products.png" alt="Icon" />
+          </div>
+          <div class="kalarity__desc-sec">
     
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Gold Capsules" />
-                </div>
-                <div class="product-description">
-                    <div class="product-info">
-                        <div class="price-variant">
-                            <h2 class="price">$9.99</h2>
-                            <p class="variant">Gold</p>
-                        </div>
-                        <p class="product-name">Capsules</p>
-                    </div>
-                    <div class="rating">
-                        <ul class="stars" aria-label="5 out of 5 stars">
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                        </ul>
-                        <p class="reviews">101 Customer reviews</p>
-                    </div>
-                </div>
-            </div>
     
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Red Bali Capsules" />
-                </div>
-                <div class="product-description">
-                    <div class="product-info">
-                        <div class="price-variant">
-                            <h2 class="price">$9.99</h2>
-                            <p class="variant">Red Bali</p>
-                        </div>
-                        <p class="product-name">Capsules</p>
-                    </div>
-                    <div class="rating">
-                        <ul class="stars" aria-label="5 out of 5 stars">
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                        </ul>
-                        <p class="reviews">98 Customer reviews</p>
-                    </div>
-                </div>
-            </div>
+            <p class="kalarity__subtitle">ONLY AT KLARITY KRATOM</p>
+            <h2 class="kalarity__headline">PURE POWER. <span>REAL RESULTS.</span></h2>
+            <p class="kalarity__description">
+              Discover why thousands trust Klairty Kratom for their daily edge.
+              From fast-acting liquid extracts to ultra-fine powders and easy-to-take capsules,
+              our lineup delivers clean, consistent quality every time. GMP-compliant,
+              rigorously tested, and crafted for those who demand more from their kratom.
+            </p>
+            <button class="kalarity__button">SHOP NOW AND EXPERIENCE THE DIFFERENCE</button>
+          </div>
+        </div>
+      </section>
     
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Trainwreck Capsules" />
-                </div>
-                <div class="product-description">
-                    <div class="product-info">
-                        <div class="price-variant">
-                            <h2 class="price">$9.99</h2>
-                            <p class="variant">Trainwreck</p>
-                        </div>
-                        <p class="product-name">Capsules</p>
-                    </div>
-                    <div class="rating">
-                        <ul class="stars" aria-label="5 out of 5 stars">
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                        </ul>
-                        <p class="reviews">113 Customer reviews</p>
-                    </div>
-                </div>
+      <section class="kalarity__Journal-sec">
+        <div class="kalarity__container">
+          <div class="journal-header">
+            <div class="text-content">
+              <h2>Explore the<span>Klarity Journal</span></h2>
+              <h4>Stay informed, curious, and empowered.</h4>
+              <p>From usage insights to brewing guides, our blog dives deep into everything Kratom—science, stories,
+                and safe</p>
             </div>
+            <button class="visit-blog-btn">Visit Blog</button>
+          </div>
     
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Gold Capsules" />
+          <div class="kalarity__Journal-slider">
+            <div class="owl-carousel">
+              <!-- Slide 1 -->
+              <div class="Journal-slider-card">
+                <div class="slider__image">
+                  <img src="./assets/images/slider-img-1.png" alt="Image 1" />
                 </div>
-                <div class="product-description">
-                    <div class="product-info">
-                        <div class="price-variant">
-                            <h2 class="price">$9.99</h2>
-                            <p class="variant">Gold</p>
-                        </div>
-                        <p class="product-name">Capsules</p>
-                    </div>
-                    <div class="rating">
-                        <ul class="stars" aria-label="5 out of 5 stars">
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                        </ul>
-                        <p class="reviews">101 Customer reviews</p>
-                    </div>
+                <div class="slider__desc">
+                  <a href="#">How to Make Kratom Tea: A Short Step-By-Step Guide</a>
+                  <p>28 Nov, 2025</p>
                 </div>
-            </div>
+              </div>
     
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Red Bali Capsules" />
+              <!-- Slide 2 -->
+              <div class="Journal-slider-card">
+                <div class="slider__image">
+                  <img src="./assets/images/slider-img-2.png" alt="Image 2" />
                 </div>
-                <div class="product-description">
-                    <div class="product-info">
-                        <div class="price-variant">
-                            <h2 class="price">$9.99</h2>
-                            <p class="variant">Red Bali</p>
-                        </div>
-                        <p class="product-name">Capsules</p>
-                    </div>
-                    <div class="rating">
-                        <ul class="stars" aria-label="5 out of 5 stars">
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                        </ul>
-                        <p class="reviews">98 Customer reviews</p>
-                    </div>
+                <div class="slider__desc">
+                  <a href="#">How to Make Kratom Tea: A Short Step-By-Step Guide</a>
+                  <p>28 Nov, 2025</p>
                 </div>
-            </div>
+              </div>
     
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Trainwreck Capsules" />
+              <!-- Slide 3 -->
+              <div class="Journal-slider-card">
+                <div class="slider__image">
+                  <img src="./assets/images/slider-img-3.png" alt="Image 3" />
                 </div>
-                <div class="product-description">
-                    <div class="product-info">
-                        <div class="price-variant">
-                            <h2 class="price">$9.99</h2>
-                            <p class="variant">Trainwreck</p>
-                        </div>
-                        <p class="product-name">Capsules</p>
-                    </div>
-                    <div class="rating">
-                        <ul class="stars" aria-label="5 out of 5 stars">
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                        </ul>
-                        <p class="reviews">113 Customer reviews</p>
-                    </div>
+                <div class="slider__desc">
+                  <a href="#">Can You Smoke Kratom? Side Effects and Alternatives</a>
+                  <p>28 Nov, 2025</p>
                 </div>
+              </div>
+              <div class="Journal-slider-card">
+                <div class="slider__image">
+                  <img src="./assets/images/slider-img-4.png" alt="Image 3" />
+                </div>
+                <div class="slider__desc">
+                  <a href="#">Does Kratom Show Up in a Drug Test?</a>
+                  <p>28 Nov, 2025</p>
+                </div>
+              </div>
             </div>
-    
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Gold Capsules" />
-                </div>
-                <div class="product-description">
-                    <div class="product-info">
-                        <div class="price-variant">
-                            <h2 class="price">$9.99</h2>
-                            <p class="variant">Gold</p>
-                        </div>
-                        <p class="product-name">Capsules</p>
-                    </div>
-                    <div class="rating">
-                        <ul class="stars" aria-label="5 out of 5 stars">
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                        </ul>
-                        <p class="reviews">101 Customer reviews</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Trainwreck Capsules" />
-                </div>
-                <div class="product-description">
-                    <div class="product-info">
-                        <div class="price-variant">
-                            <h2 class="price">$9.99</h2>
-                            <p class="variant">Trainwreck</p>
-                        </div>
-                        <p class="product-name">Capsules</p>
-                    </div>
-                    <div class="rating">
-                        <ul class="stars" aria-label="5 out of 5 stars">
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                            <li class="filled"></li>
-                        </ul>
-                        <p class="reviews">113 Customer reviews</p>
-                    </div>
-                </div>
-            </div>
+          </div>
     
         </div>
-    </section>
+      </section>
+
+    <!--Klarity Footer-->
+    <footer>
+        <div class="container">
+            <div class="footer-box d-flex">
+                <div class="logo-box">
+                    <div class="logo">
+                        <img src="./assets/images/footer-logo.png" alt="logo">
+                    </div>
+                    <div class="about text"> about us
+
+                    </div>
+                    <p>Klarity Kratom has two missions. To help inform the public about the miraculous herb
+                        Mitragyna Speciosa known as Kratom, and to provide users with an organic quality product.
+                    </p>
+                </div>
+                <div class="quick-links">
+                    <div class="quick text">Quick links</div>
+                    <ul>
+                        <li> <a href="">affiliate program</a> </li>
+                        <li> <a href="">kratom shop</a> </li>
+                        <li> <a href="">contact us</a> </li>
+                        <li> <a href="">terms of purchase</a> </li>
+                        <li> <a href="">privacy policy</a> </li>
+                        <li> <a href="">returns policy</a> </li>
+                        <li> <a href="">blog</a> </li>
+
+                    </ul>
+                </div>
+                <div class="location-box ">
+                    <div class="location text">location</div>
+                    <p>2020 NW Industrial Park RD, Prineville, Oregon 97754</p>
+                    <p class="d-flex gap-1 text_dark" ><span>Phone:</span>
+                        <a href="tel:(213) 749-1430" class="text_dark text-decoration-none">(213) 749-1430</a>     
+                    </p>
+                    <div class="accpet text">Accept payment</div>
+                    <div class="payment-card">
+                        <img src="./assets/images/payment-methods.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-two">
+        <div class="container">
+            <div class="footer-two-box">
+                <p>Any information available on our website, either deliver through emails or in any other communication
+                    channel, is designed only to enlighten our customers educationally. The obtained data is not meant
+                    to be used as any type of medical advice or care. You ought not to utilize this data to analyze or
+                    treat any medical issues or ailments without proper medical consultation. Also Kratom is not used to
+                    treat, cure, or mitigate any disease, illness, ailment, and/or condition. </p>
+                <p class="f-size">The US FDA has not approved Kratom as a dietary supplement. We do not ship to the
+                    following states, cities, and counties in the US where Kratom is banned: Alabama, Arkansas,
+                    California, Indiana, Rhode Island, Tennessee, Vermont, Wisconsin, Denver, San Diego, Sarasota
+                    County, and Union County. </p>
+                <p> &copy; Copyright 2025. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+        crossorigin="anonymous"></script>
+              <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
+      <!-- Owl Carousel JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          const $carousel = $('.owl-carousel');
+          const itemCount = $carousel.find('.Journal-slider-card').length;
+    
+          $carousel.owlCarousel({
+             loop: true,
+            // margin: 10,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            items: 4,
+             responsive: {
+              0: { items: 1 },
+              600: { items: 2 },
+              1000: { items: 4 }
+            },
+            navText: [
+              '<i class="fa fa-chevron-left"></i>',
+              '<i class="fa fa-chevron-right"></i>'
+            ]
+          });
+          
+        });
+        const buttons = document.querySelectorAll(".accordion_button");
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const content = btn.nextElementSibling;
+            btn.classList.toggle("active");
+            content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+          });
+        });
+      </script>
 </body>
+
 </html>
