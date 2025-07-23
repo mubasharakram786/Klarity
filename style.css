@@ -5,18 +5,20 @@
     box-sizing: border-box;
      font-family: "Rubik", sans-serif;
 }
+/* CUSTOM UTILITY CLASS*/
+.d-flex{
+  display: flex;
+}
 
 /* Main Wrapper */
 .product-highlight {
-  max-width: 1240px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 4rem 1rem;
-      background: #fbfbfb;
 }
 
 /* Top Section: Image + Text */
 .product-wrapper {
-  display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
@@ -37,7 +39,10 @@
 
 .product-info h1 {
   font-size: 2.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+  p{
+    font-size: 58px;
+  }
 }
 
 .product-info .accent {
@@ -46,13 +51,13 @@
   display: inline-block;
   margin-bottom: 0.2rem;
 }
-.product-info >div  p{
-    font-size: 58px;
-}
+
 
 .product-info p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 300;
+
 }
 
 .btn {
@@ -62,49 +67,75 @@
   font-weight: bold;
   padding: 0.8rem 1.5rem;
   border-radius: 5px;
-  transition: background 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #e6c200;
-}
-
-/* Bottom Grid: Strains */
-.strain-grid ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-}
-
-.strain-grid li {
-  text-align: center;
-  width: 100px;
-}
-
-
-
-.strain-grid p {
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.strain-item {
-  background: transparent url('./assets/images/l-1.png') 0% 0% no-repeat padding-box;
-  width: 131px; /* adjust as needed */
-  height: 164px; /* adjust as needed */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  text-align: center;
-  /* transition: all .4s ease;
-  border: 1px solid red; */
+/* DONT CHANGE THIS ORDER */
+.maeng-da{
+background: transparent url('./assets/images/l1.png') 0% 0% no-repeat padding-box;
+ background-size: contain;
 }
 .strain-item:focus {
   background-image: url('./assets/images/foccus.png') !important;
 }
-.strain-item:hover {
-  background-image: url('./assets/images/l2.png');
+.maeng-da:hover {
+  background-image: url('./assets/images/l-2.png');
+}
+.red-bali{
+   background: transparent url('./assets/images/red.png') 0% 0% no-repeat padding-box;
 }
 
+.red-bali:hover {
+  background-image: url('./assets/images/red-2.png');
+}
+.gold {
+  background: transparent url('./assets/images/gold.png') 0% 0% no-repeat padding-box;
+}
+
+.gold:hover {
+  background-image: url('./assets/images/gold-2.png');
+}
+
+.trainwreck {
+  background: transparent url('./assets/images/coper.png') 0% 0% no-repeat padding-box;
+}
+
+.trainwreck:hover {
+  background-image: url('./assets/images/coper-2.png');
+}
+
+.green-malay {
+  background: transparent url('./assets/images/green.png') 0% 0% no-repeat padding-box;
+}
+
+.green-malay:hover {
+  background-image: url('./assets/images/green-2.png');
+}
+
+.white-borneo {
+  background: transparent url('./assets/images/sky-2.png') 0% 0% no-repeat padding-box;
+}
+
+.white-borneo:hover {
+  background-image: url('./assets/images/sky.png');
+}
+
+.white-thai {
+  background: transparent url('./assets/images/faded.png') 0% 0% no-repeat padding-box;
+}
+
+.white-thai:hover {
+  background-image: url('./assets/images/faded-2.png');
+}
+.strain-item {
+  
+  width: 143px; 
+  height: 172px; 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  transition: background-image .4s ease;
+  
+}
+
+/* DONT CHANGE Above ORDER */
