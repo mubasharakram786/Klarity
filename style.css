@@ -373,74 +373,6 @@ body{
   background-size: contain;
 }
 
-.strain-item:focus {
-  background-image: url('./assets/images/foccus.png') !important;
-}
-
-.maeng-da:hover {
-  background-image: url('./assets/images/l-2.png');
-}
-
-.red-bali {
-  background: transparent url('./assets/images/red.png') 0% 0% no-repeat padding-box;
-}
-
-.red-bali:hover {
-  background-image: url('./assets/images/red-2.png');
-}
-
-.gold {
-  background: transparent url('./assets/images/gold.png') 0% 0% no-repeat padding-box;
-}
-
-.gold:hover {
-  background-image: url('./assets/images/gold-2.png');
-}
-
-.trainwreck {
-  background: transparent url('./assets/images/coper.png') 0% 0% no-repeat padding-box;
-}
-
-.trainwreck:hover {
-  background-image: url('./assets/images/coper-2.png');
-}
-
-.green-malay {
-  background: transparent url('./assets/images/green.png') 0% 0% no-repeat padding-box;
-}
-
-.green-malay:hover {
-  background-image: url('./assets/images/green-2.png');
-}
-
-.white-borneo {
-  background: transparent url('./assets/images/sky-2.png') 0% 0% no-repeat padding-box;
-}
-
-.white-borneo:hover {
-  background-image: url('./assets/images/sky.png');
-}
-
-.white-thai {
-  background: transparent url('./assets/images/faded.png') 0% 0% no-repeat padding-box;
-}
-
-.white-thai:hover {
-  background-image: url('./assets/images/faded-2.png');
-}
-
-.strain-item {
-
-  width: 131px;
-  height: 164px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  transition: background-image .4s ease;
-
-}
-
 /* DONT CHANGE Above ORDER */
 .container {
   max-width: 1280px;
@@ -1444,63 +1376,73 @@ margin-bottom:16px;
   color: #5A3F16;
 }
 .strain-grid{
-    gap: calc(4rem - 20px);
+    gap: calc(4rem - 30px);
 }
 /* DONT CHANGE THIS ORDER */
-.maeng-da {
-  background: transparent url('./assets/images/l1.png') 0% 0% no-repeat padding-box;
-  background-size: contain;
+
+/* :white_check_mark: Common strain item style */
+/* :white_check_mark: Core strain wrapper */
+.strain-wrapper {
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  /* :large_blue_circle: Active state */
+  &.active {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    p {
+      color: #fff;
+    }
+    .strain-item {
+      background-color: transparent;
+      border: none;
+      border-radius: 50px;
+      /* Optional: active image per strain — fallback handled below */
+    }
+  }
+  /* :large_green_circle: Hover effect only when NOT active */
+  &:not(.active):hover .strain-item {
+    border-radius: 50px;
+    background-color: transparent;
+  }
 }
-.strain-item:focus {
-  background-image: url('./assets/images/foccus.png') !important;
-}
-.maeng-da:hover {
-  background-image: url('./assets/images/l-2.png');
-}
-.red-bali {
-  background: transparent url('./assets/images/red.png') 0% 0% no-repeat padding-box;
-}
-.red-bali:hover {
-  background-image: url('./assets/images/red-2.png');
-}
-.gold {
-  background: transparent url('./assets/images/gold.png') 0% 0% no-repeat padding-box;
-}
-.gold:hover {
-  background-image: url('./assets/images/gold-2.png');
-}
-.trainwreck {
-  background: transparent url('./assets/images/coper.png') 0% 0% no-repeat padding-box;
-}
-.trainwreck:hover {
-  background-image: url('./assets/images/coper-2.png');
-}
-.green-malay {
-  background: transparent url('./assets/images/green.png') 0% 0% no-repeat padding-box;
-}
-.green-malay:hover {
-  background-image: url('./assets/images/green-2.png');
-}
-.white-borneo {
-  background: transparent url('./assets/images/sky-2.png') 0% 0% no-repeat padding-box;
-}
-.white-borneo:hover {
-  background-image: url('./assets/images/sky.png');
-}
-.white-thai {
-  background: transparent url('./assets/images/faded.png') 0% 0% no-repeat padding-box;
-}
-.white-thai:hover {
-  background-image: url('./assets/images/faded-2.png');
-}
+
 .strain-item {
+  background-color: #F8F8F8;
   width: 131px;
-  height: 164px;
+  height: 131px;
+  border-radius: 50%;
+  border: 1px solid #E8E8E8;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-image .4s ease;
+  margin-bottom: 14px;
+  transition: all 0.4s ease;
 }
+/* :white_check_mark: Default strain images */
+.maeng-da    { background-image: url('./assets/images/product-highlight-img1.svg'); }
+.red-bali    { background-image: url('./assets/images/product-highlight-img2.svg'); }
+.gold        { background-image: url('./assets/images/product-highlight-img3.svg'); }
+.trainwreck  { background-image: url('./assets/images/product-highlight-img4.svg'); }
+.green-malay { background-image: url('./assets/images/product-highlight-img5.svg'); }
+.white-borneo{ background-image: url('./assets/images/product-highlight-img6.svg'); }
+.white-thai  { background-image: url('./assets/images/product-highlight-img7.svg'); }
+/* :white_check_mark: Hover image ONLY when NOT active */
+.strain-wrapper:not(.active):hover .maeng-da    { background-image: url('./assets/images/product-highlight-img1-hover.svg'); }
+.strain-wrapper:not(.active):hover .red-bali    { background-image: url('./assets/images/product-highlight-img2-hover.svg'); }
+.strain-wrapper:not(.active):hover .gold        { background-image: url('./assets/images/product-highlight-img3-hover.svg'); }
+.strain-wrapper:not(.active):hover .trainwreck  { background-image: url('./assets/images/product-highlight-img4-hover.svg'); }
+.strain-wrapper:not(.active):hover .green-malay { background-image: url('./assets/images/product-highlight-img5-hover.svg'); }
+.strain-wrapper:not(.active):hover .white-borneo{ background-image: url('./assets/images/product-highlight-img6-hover.svg'); }
+.strain-wrapper:not(.active):hover .white-thai  { background-image: url('./assets/images/product-highlight-img7-hover.svg'); }
+/* :white_check_mark: Optional: Active state specific images — so each card stays unique when active */
+.strain-wrapper.active .maeng-da    { background-image: url('./assets/images/product-highlight-img1-hover.svg'); }
+.strain-wrapper.active .red-bali    { background-image: url('./assets/images/product-highlight-img2-hover.svg'); }
+.strain-wrapper.active .gold        { background-image: url('./assets/images/product-highlight-img3-hover.svg'); }
+.strain-wrapper.active .trainwreck  { background-image: url('./assets/images/product-highlight-img4-hover.svg'); }
+.strain-wrapper.active .green-malay { background-image: url('./assets/images/product-highlight-img5-hover.svg'); }
+.strain-wrapper.active .white-borneo{ background-image: url('./assets/images/product-highlight-img6-hover.svg'); }
+.strain-wrapper.active .white-thai  { background-image: url('./assets/images/product-highlight-img7-hover.svg'); }
 /* DONT CHANGE Above ORDER */
 .bgc-clr{
    background-color: #F9F9F9;
@@ -1580,15 +1522,10 @@ footer {
   gap: 40px;
   .logo {
     max-width: 270px;
-    height: 83px;
+    /* height: 83px; */
     margin-bottom: 40px;
-    transform: translateY(-10px);
-  
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    transform: translateY(10px);
+
   }
 }
 
@@ -1626,7 +1563,7 @@ footer {
 
   li {
     font-size: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   a {

@@ -1019,19 +1019,40 @@
       </div>
       <!-- Bottom part -->
       <div class="strain-grid d-flex justify-content-center">
-        <div class="strain-item maeng-da" tabindex="0">
+        <div class="strain-wrapper " tabindex="0">
+          <div class="strain-item maeng-da" >
+          </div>
+          <p>Maeng Da</p>
         </div>
-        <div class="strain-item red-bali" tabindex="0">
+        <div class="strain-wrapper" tabindex="0">
+          <div class="strain-item red-bali" tabindex="0">
+          </div>
+          <p>Red Bali</p>
         </div>
-        <div class="strain-item gold" tabindex="0">
+        <div class="strain-wrapper" tabindex="0">
+          <div class="strain-item gold" tabindex="0">
+          </div>
+          <p>Gold</p>
         </div>
-        <div class="strain-item trainwreck" tabindex="0">
+        <div class="strain-wrapper" tabindex="0">
+          <div class="strain-item trainwreck" tabindex="0">
+          </div>
+          <p>Trainwreck</p>
         </div>
-        <div class="strain-item green-malay" tabindex="0">
+        <div class="strain-wrapper" tabindex="0">
+          <div class="strain-item green-malay" tabindex="0">
+          </div>
+          <p>Green Malay</p>
         </div>
-        <div class="strain-item white-borneo" tabindex="0">
+        <div class="strain-wrapper" tabindex="0">
+          <div class="strain-item white-borneo" tabindex="0">
+          </div>
+          <p>White Borneo</p>
         </div>
-        <div class="strain-item white-thai" tabindex="0">
+        <div class="strain-wrapper" tabindex="0">
+          <div class="strain-item white-thai" tabindex="0">
+          </div>
+          <p>White Thai</p>
         </div>
       </div>
     </div>
@@ -1414,6 +1435,14 @@
           });
         });
       </script>
+      <script>
+        const wrappers = document.getElementsByClassName('strain-wrapper');
+     Array.from(wrappers).forEach(wrapper => {
+       wrapper.addEventListener('click', () => {
+         wrapper.classList.toggle('active');
+       });
+     });
+     </script>
 </body>
 
 </html>
