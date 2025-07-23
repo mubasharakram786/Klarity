@@ -865,8 +865,32 @@ Amir Section Style
 
 .faq-title {
   margin-bottom: 30px;
-}
+  max-width: 514px;
+  position: relative;
 
+}
+.faq-title::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 55%;
+    background-image: url(/assets/images/y-balls.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 28px;
+    top: 54px;
+}
+.faq-title::after{
+   bottom: -13px;
+    left: -32px;
+    position: absolute;
+    content: '';
+    width: 35%;
+    height: 14%;
+    background-image: url(/assets/images/snake.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
 .faq-title h2 {
   font-size: 32px;
   line-height: 43px;
