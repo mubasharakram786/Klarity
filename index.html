@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -97,7 +98,7 @@
     <!-- hero section -->
     <section class="hero-section">
         <div class="container">
-          <div class="row align-items-center">
+          <div class="row align-items-end">
             <div class="col-md-5">
               <div class="hero-content">
                 <p class="experience-text">Experience Clarity </p>
@@ -111,7 +112,7 @@
               <div class="hero-image-container">
                 <img src="./assets/images/banner-bottle.svg" alt="Klarity Kratom Bottle" class="bottle-image">
                 <img src="./assets/images/banner-cap.svg" alt="Klarity Kratom Bottle" class="cap-image">
-                <img src="./assets/images/banner-top-palm.svg" alt="Klarity Kratom Bottle" class="top-palm">
+                <img src="./assets/images/banner-top-palm.png" alt="Klarity Kratom Bottle" class="top-palm">
                 <img src="./assets/images/banner-bootm-palm.svg" alt="Klarity Kratom Bottle" class="bottom-palm">
                 <img src="./assets/images/banner-left-palm.svg" alt="Klarity Kratom Bottle" class="left-palm">
                 <img src="./assets/images/banner-yellow-circle.svg" alt="Klarity Kratom Bottle" class="yellow-circle">
@@ -138,7 +139,7 @@
 
             </div>
             <div class="top-picks-product-list">
-                <div class="top-picks-card">
+                <div class="top-picks-card" id="card-1">
                     <div class="top-picks-product-image">
                         <img src="./assets/images/product-image.png" alt="product image">
                     </div>
@@ -147,24 +148,32 @@
                         <div class="top-picks-product-price">$9.99</div>
                         <div class="d-flex medics-selection">
                             <label for="capsules">
-                                <input type="radio" name="medics" >
-                                <span>
-                                    Capsules
-                                </span>
+                              <input type="radio" checked name="medics" id="capsules">
+                              <span>Capsules</span>
                             </label>
                             <label for="powder">
-                                <input type="radio" name="medics" >
-                                <span>
-                                    Powder
-                                </span>
+                              <input type="radio" name="medics" id="powder">
+                              <span>Powder</span>
                             </label>
-                        </div>
-                        <select class="form-select qty-dropdown" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
+                          </div>
+                          
+                       
+                          <div class="dropdown custom-dropdown">
+                            <div
+                              class="btn-light dropdown-toggle custom-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="selected-text">Select an option</span>
+                              <i class="fa-solid fa-angle-down icon"></i>
+                            </div>
+                            <ul class="dropdown-menu animate-dropdown">
+                              <li class="dropdown-item" data-value="Option A">Option A</li>
+                              <li class="dropdown-item" data-value="Option B">Option B</li>
+                            </ul>
+                          </div>
+                          
+                          
                           <div class="d-flex justify-content-between">
                             <div class="product-reviews">
                                 <div class="total-reviews-result">
@@ -209,12 +218,20 @@
                                 </span>
                             </label>
                         </div>
-                        <select class="form-select qty-dropdown" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
+                        <div class="dropdown custom-dropdown">
+                            <div
+                              class="btn-light dropdown-toggle custom-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="selected-text">Select an option</span>
+                              <i class="fa-solid fa-angle-down icon"></i>
+                            </div>
+                            <ul class="dropdown-menu animate-dropdown">
+                              <li class="dropdown-item" data-value="Option A">Option A</li>
+                              <li class="dropdown-item" data-value="Option B">Option B</li>
+                            </ul>
+                          </div>
                           <div class="d-flex justify-content-between">
                             <div class="product-reviews">
                                 <div class="total-reviews-result">
@@ -259,12 +276,20 @@
                                 </span>
                             </label>
                         </div>
-                        <select class="form-select qty-dropdown" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
+                        <div class="dropdown custom-dropdown">
+                            <div
+                              class="btn-light dropdown-toggle custom-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="selected-text">Select an option</span>
+                              <i class="fa-solid fa-angle-down icon"></i>
+                            </div>
+                            <ul class="dropdown-menu animate-dropdown">
+                              <li class="dropdown-item" data-value="Option A">Option A</li>
+                              <li class="dropdown-item" data-value="Option B">Option B</li>
+                            </ul>
+                          </div>
                           <div class="d-flex justify-content-between">
                             <div class="product-reviews">
                                 <div class="total-reviews-result">
@@ -309,12 +334,20 @@
                                 </span>
                             </label>
                         </div>
-                        <select class="form-select qty-dropdown" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
+                        <div class="dropdown custom-dropdown">
+                            <div
+                              class="btn-light dropdown-toggle custom-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="selected-text">Select an option</span>
+                              <i class="fa-solid fa-angle-down icon"></i>
+                            </div>
+                            <ul class="dropdown-menu animate-dropdown">
+                              <li class="dropdown-item" data-value="Option A">Option A</li>
+                              <li class="dropdown-item" data-value="Option B">Option B</li>
+                            </ul>
+                          </div>
                           <div class="d-flex justify-content-between">
                             <div class="product-reviews">
                                 <div class="total-reviews-result">
@@ -359,12 +392,20 @@
                                 </span>
                             </label>
                         </div>
-                        <select class="form-select qty-dropdown" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
+                        <div class="dropdown custom-dropdown">
+                            <div
+                              class="btn-light dropdown-toggle custom-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="selected-text">Select an option</span>
+                              <i class="fa-solid fa-angle-down icon"></i>
+                            </div>
+                            <ul class="dropdown-menu animate-dropdown">
+                              <li class="dropdown-item" data-value="Option A">Option A</li>
+                              <li class="dropdown-item" data-value="Option B">Option B</li>
+                            </ul>
+                          </div>
                           <div class="d-flex justify-content-between">
                             <div class="product-reviews">
                                 <div class="total-reviews-result">
@@ -409,12 +450,20 @@
                                 </span>
                             </label>
                         </div>
-                        <select class="form-select qty-dropdown" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
+                        <div class="dropdown custom-dropdown">
+                            <div
+                              class="btn-light dropdown-toggle custom-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="selected-text">Select an option</span>
+                              <i class="fa-solid fa-angle-down icon"></i>
+                            </div>
+                            <ul class="dropdown-menu animate-dropdown">
+                              <li class="dropdown-item" data-value="Option A">Option A</li>
+                              <li class="dropdown-item" data-value="Option B">Option B</li>
+                            </ul>
+                          </div>
                           <div class="d-flex justify-content-between">
                             <div class="product-reviews">
                                 <div class="total-reviews-result">
@@ -459,12 +508,20 @@
                                 </span>
                             </label>
                         </div>
-                        <select class="form-select qty-dropdown" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
+                        <div class="dropdown custom-dropdown">
+                            <div
+                              class="btn-light dropdown-toggle custom-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="selected-text">Select an option</span>
+                              <i class="fa-solid fa-angle-down icon"></i>
+                            </div>
+                            <ul class="dropdown-menu animate-dropdown">
+                              <li class="dropdown-item" data-value="Option A">Option A</li>
+                              <li class="dropdown-item" data-value="Option B">Option B</li>
+                            </ul>
+                          </div>
                           <div class="d-flex justify-content-between">
                             <div class="product-reviews">
                                 <div class="total-reviews-result">
@@ -509,12 +566,20 @@
                                 </span>
                             </label>
                         </div>
-                        <select class="form-select qty-dropdown" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
+                        <div class="dropdown custom-dropdown">
+                            <div
+                              class="btn-light dropdown-toggle custom-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="selected-text">Select an option</span>
+                              <i class="fa-solid fa-angle-down icon"></i>
+                            </div>
+                            <ul class="dropdown-menu animate-dropdown">
+                              <li class="dropdown-item" data-value="Option A">Option A</li>
+                              <li class="dropdown-item" data-value="Option B">Option B</li>
+                            </ul>
+                          </div>
                           <div class="d-flex justify-content-between">
                             <div class="product-reviews">
                                 <div class="total-reviews-result">
@@ -740,13 +805,13 @@
         <div class="rush-left">
             <div class="text-column">
               <div class="heading-wrapper">
-                <span class="large-letter">L</span>
+                
                 <div class="heading-text">
                   <p class="rush-subheading">
-                    <span>U</span>nleash the
+                    Unleash the
                   </p>
                   <p class="rush-mainheading">
-                    iquid Rush
+                    Liquid Rush
                   </p> 
                 </div>
               </div>
@@ -797,10 +862,10 @@
 
         <div class="product-card">
             <div class="product-image">
-                <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Gold Capsules" />
+                <img src="https://i.ibb.co/Kccyg0cK/Gold.png" alt="Red Bali Capsules" />
             </div>
             <div class="product-description">
-                <div class="product-info-custom-custom">
+                <div class="product-info-custom">
                     <div class="price-variant">
                         <h2 class="price">$9.99</h2>
                         <p class="variant m-0">Gold</p>
@@ -815,7 +880,7 @@
                         <li class="filled"></li>
                         <li class="filled"></li>
                     </ul>
-                    <p class="reviews">101 Customer reviews</p>
+                    <p class="reviews">98 Customer reviews</p>
                 </div>
             </div>
         </div>
@@ -1062,7 +1127,7 @@
         <img src="./assets/images/kratom.jpg" alt="Klarty Kratom Maeng Da Capsules" />
       </div>
       <div class="product-info about-kratom  d-flex">
-        <h1 class="w-100 decorated mb-40"><span class="everything">Everything </span>
+        <h1 class="w-100 decorated "><span class="everything">Everything </span>
           <p class="mb-0">
             You need to know
             About Kratom
@@ -1435,6 +1500,49 @@
           });
         });
       </script>
+      <script>
+        // Handle dropdown item selection
+        document.querySelectorAll('.custom-dropdown .dropdown-item').forEach(item => {
+          item.addEventListener('click', function (e) {
+            e.preventDefault();
+      
+            const selectedValue = this.getAttribute('data-value');
+            const dropdown = this.closest('.custom-dropdown');
+            const toggleButton = dropdown.querySelector('.custom-toggle');
+            const selectedText = toggleButton.querySelector('.selected-text');
+      
+            // Update the selected text only (keep the icon)
+            selectedText.textContent = selectedValue;
+      
+            // Remove active class from all siblings
+            dropdown.querySelectorAll('.dropdown-item').forEach(el => {
+              el.classList.remove('active');
+            });
+      
+            // Add active class to selected item
+            this.classList.add('active');
+      
+            // Optional: Get card reference if needed
+            const card = this.closest('.top-picks-card');
+            console.log('Selected for card:', card?.id, 'Value:', selectedValue);
+          });
+        });
+      
+        // Add 'active' class to .top-picks-card on dropdown open
+        document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
+          dropdown.addEventListener('show.bs.dropdown', function () {
+            const card = this.closest('.top-picks-card');
+            if (card) card.classList.add('active');
+          });
+      
+          dropdown.addEventListener('hide.bs.dropdown', function () {
+            const card = this.closest('.top-picks-card');
+            if (card) card.classList.remove('active');
+          });
+        });
+      </script>
+      
+      
       <script>
         const wrappers = document.getElementsByClassName('strain-wrapper');
      Array.from(wrappers).forEach(wrapper => {
