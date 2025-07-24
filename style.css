@@ -1309,7 +1309,7 @@ margin-bottom:16px;
 .review-stars {
   display: flex;
   gap: 3px;
-  margin-bottom:10px;
+  margin-bottom:6px;
   .fa-star{
     font-size: 14px;
       color:#FFC400;
