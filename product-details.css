@@ -245,15 +245,21 @@
 
 .product-info__qty-btn {
   background-color: #fff;
-  padding: 6px 15px;
+  padding: 6px 11px;
   border: 1px solid #fff;
 }
 
 .product-info__qty {
-  font-size: 14px;
-  line-height: 19px;
-  font-weight: bold;
-  padding: 0 33px;
+     font-size: 14px;
+    line-height: 19px;
+    font-weight: bold;
+    padding: 0 18px;
+    max-width: 77px;
+    border: 0;
+    background-color: #F8F8F8;
+}
+.product-info__qty:focus-visible{
+  outline: 0;
 }
 
 .product-info__qty-btn:first-child {
