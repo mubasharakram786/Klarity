@@ -320,11 +320,13 @@ body {
 .product-info {
   flex: 1;
   min-width: 300px;
+
 }
 
-.product-info div {
+.product-info-top div {
   font-size: 2.2rem;
   /* margin-bottom: 3rem; */
+  
 
   p {
     font-size: 58px;
@@ -345,11 +347,11 @@ body {
   transform: translate(75px);
 }
 
-.product-info p {
+.product-info > p {
   font-size: 18px;
   line-height: 28px;
   font-weight: 300;
-  margin-bottom: 42px;
+     padding-inline-end: 60px;
 }
 
 .btn {
@@ -1481,13 +1483,16 @@ Amir Section Style
   font-size: 18px;
   line-height: 28px;
   font-weight: 300;
-  margin-bottom: 42px;
+ 
+}
+.custom-50{
+  padding-inline-end: 50px;
 }
 .btn-shop {
   background-color: #ffe600;
   text-decoration: none;
   font-weight: bold;
-  padding: 1.5rem;
+  padding: 1.4rem;
   max-width: 248px;
   border-radius: 10px;
   display: inline-block;
@@ -1612,7 +1617,7 @@ Amir Section Style
   align-items: unset;
 }
 .about-kratom {
-  /* padding: 35px 40px 40px; */
+ padding-block: 15px;
   h1 {
   max-width: 410px;
     span {
@@ -1657,7 +1662,7 @@ Amir Section Style
     background-image: url(./assets/images/snake.png);
     background-size: contain;
     background-repeat: no-repeat;
-    bottom: 30px;
+    bottom: 26px;
 }
 /*==============================
   Footer Style
