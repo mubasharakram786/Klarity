@@ -1012,6 +1012,8 @@ Amir Section Style
   font-weight: bold;
   cursor: pointer;
   position: relative;
+      text-align: center;
+    text-decoration: none;
   &::before {
     position: absolute;
     left: 50%;
@@ -1106,30 +1108,30 @@ Amir Section Style
 }
 
 .kalarity__Journal-slider .owl-nav {
-  position: absolute !important;
-  top: 35% !important;
-  width: 100% !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  pointer-events: none !important;
-  z-index: 10 !important;
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  display: flex !important ;
+  justify-content: space-between ;
+  pointer-events: none;
+
 }
 
 .kalarity__Journal-slider .owl-prev,
 .kalarity__Journal-slider .owl-next {
-  background-color: transparent !important;
-  color: #fff !important;
-  font-size: 24px !important;
-  border: none !important;
-  padding: 8px 12px !important;
-  border-radius: 50% !important;
-  cursor: pointer !important;
-  pointer-events: all !important;
-  transition: background 0.3s ease !important;
+  color:#000;
+  pointer-events: all;
+  
 }
 
 .kalarity__Journal-slider .owl-prev {
-  left: 0;
+      left: -54px;
+    position: absolute;
+}
+
+.kalarity__Journal-slider .owl-next {
+    right: -52px;
+    position: absolute;
 }
 
 .Journal-slider-card:hover .slider__image::after {
