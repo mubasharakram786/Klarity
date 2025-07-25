@@ -16,7 +16,13 @@ body {
 .mb-40 {
   margin-bottom: 40px;
 }
+<<<<<<< HEAD
 
+=======
+.mb-50{
+  margin-bottom: 50px;
+}
+>>>>>>> 1a03725d07d0619790f07af382c3c0b3dc14d286
 .form-select:focus {
   box-shadow: none !important;
 }
@@ -343,8 +349,12 @@ body {
   color: #b23c3b;
   /* font-weight: 300; */
   display: inline-block;
-  font-size: 18px;
-  transform: translate(75px);
+  font-size: 24px;
+  line-height: 23px;
+  transform: translate(86px, 24px);
+  &::first-letter{
+    font-size: 36px;
+  }
 }
 
 .product-info > p {
@@ -885,13 +895,13 @@ Amir Section Style
   content: "";
   position: absolute;
   background-image: url(./assets/images/kalarity-into.png);
-  width: 233px;
-  height: 360px;
-  left: -18px;
-  /* top: 0; */
-  background-size: 100%;
+  height: 255px;
+  background-size: cover;
   background-repeat: no-repeat;
-  bottom: -142px;
+  bottom: 60px;
+  max-width: 384px;
+  width: 100%;
+  left: -38px;
 }
 
 .kalarity__intro .kalarity__container {
@@ -1474,6 +1484,7 @@ Amir Section Style
   min-height: 418px;
 }
 
+<<<<<<< HEAD
 .product-info .accent {
   color: #b23c3b;
   /* font-weight: 300; */
@@ -1481,12 +1492,27 @@ Amir Section Style
   font-size: 18px;
   transform: translate(75px);
 }
+=======
+>>>>>>> 1a03725d07d0619790f07af382c3c0b3dc14d286
 .product-info p {
   font-size: 18px;
   line-height: 28px;
   font-weight: 300;
+<<<<<<< HEAD
  
 }
+=======
+ margin-bottom: 50px;
+}
+.product-info h3{
+  font-size: 58px;
+  line-height: 44px;
+  color: #628742;
+  &::first-letter{
+    font-size: 102px;
+  }
+}
+>>>>>>> 1a03725d07d0619790f07af382c3c0b3dc14d286
 .custom-50{
   padding-inline-end: 50px;
 }
@@ -2124,4 +2150,59 @@ footer {
     padding: 18px 27px;
     font-size: 14px;
   }
+}
+.power-up-section{
+  background-color: #fbfbfb;
+  padding: 70px 0 30px;
+}
+
+.power-up-section :is(#big,#thumbs){
+  .owl-nav{
+    display: none !important;
+  }
+}
+
+#thumbs{
+  .owl-item.current :is(.item, .item img){
+      border-radius: 26px;
+      background-color: #414141;
+  } 
+  .owl-item.current .item{
+    h3{
+      color: #fff;
+    }
+    img{
+      border-color: transparent;
+    }
+  } 
+  .item{
+    max-width: 147px;
+    min-height: 183px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+      color: #000;
+    }
+    img{
+      display: inline-block;
+      width: 131px;
+      max-width: 100%;
+      height: 131px;
+      border: 1px solid #E8E8E8;
+      border-radius: 50%;
+      background-color: #F8F8F8;
+    }
+    &:hover img{
+      border-radius: 49px;
+      background-color: #fff;
+    }
+  } 
+
+} 
+.section-product{
+  padding-block-end: 40px;
 }
